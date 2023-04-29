@@ -39,7 +39,7 @@ describe('host is corrupted (is empty somehow)', () => {
     )
     expect(origin).toBe('http://192.168.88.156:4000')
     expect(protocol).toBe('http:')
-    expect(host).toBe('localhost:4000')
+    expect(host).toBe('192.168.88.156:4000')
   })
 
   test('only from 127.0.0.1 passed in', () => {
@@ -50,7 +50,7 @@ describe('host is corrupted (is empty somehow)', () => {
     )
     expect(origin).toBe('http://127.0.0.1:4000')
     expect(protocol).toBe('http:')
-    expect(host).toBe('localhost:4000')
+    expect(host).toBe('127.0.0.1:4000')
   })
   
   test('both arguments are passed in', () => {
